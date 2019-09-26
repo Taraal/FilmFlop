@@ -11,9 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 
 //import android.support.v7.app.AppCompatActivity
 
-import android.widget.ArrayAdapter
 import com.example.filmflop.ui.TitleMovie
-import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.*
 import org.json.JSONArray
 import org.json.JSONException
@@ -72,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_categorie, R.id.navigation_recherche, R.id.navigation_historique
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
