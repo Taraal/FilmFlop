@@ -88,12 +88,12 @@ class MainActivity : AppCompatActivity() {
                 val responseData = response.body()?.string()
                 runOnUiThread { // Important, we want to refresh our data on main thread (crash otherwise)
                     try {
-                        val json = JSONArray(responseData)
+                        val json = JSONObject(responseData)
                         println("Request Successful!!")
                         println(json)
 
                         // mapping from json to list of Stations
-                        val titlemovies = json.toJSONObjectList().map {
+                        val titlemovies = json.getJSONArray("results").toJSONObjectList().map {
                             TitleMovie(
                                 it.getString("title"),
                                 it.getDouble("popularity"),
