@@ -6,6 +6,31 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize">
 
+
+ <!---   <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:icon="@drawable/ic_icon_a_24"
+            android:text="@string/tab_a_label"/>
+        <com.google.android.material.tabs.TabItem
+            android:icon="@drawable/ic_icon_b_24"
+            android:text="@string/tab_b_label"/>
+        <com.google.android.material.tabs.TabItem
+            android:icon="@drawable/ic_icon_c_24"
+            android:text="@string/tab_c_label"/>
+
+    </com.google.android.material.tabs.TabLayout>-->
+
+    <ListView
+        android:id="@+id/FilmsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
