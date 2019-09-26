@@ -57,7 +57,7 @@ fun JSONArray.toJSONObjectList(): List<JSONObject> { // Usage of extension
 class MainActivity : AppCompatActivity() {
 
     private val client = OkHttpClient()
-    private val url = "https://api.themoviedb.org/3/search/movie?api_key=54c9cfc3fc5ab9ad5de0e9a0f4bbd3f2&language=en-US&query=Kill%20bill&page=1&include_adult=false"
+    private val url = "https://api.themoviedb.org/3/search/movie?api_key=54c9cfc3fc5ab9ad5de0e9a0f4bbd3f2&language=fr-FR&query=Kill%20bill&page=1&include_adult=false"
     var titlemovies: List<TitleMovie> by Delegates.observable(emptyList()) { property, old, new ->
         refreshDisplay()
     }
@@ -97,7 +97,8 @@ class MainActivity : AppCompatActivity() {
                             TitleMovie(
                                 it.getString("title"),
                                 it.getDouble("popularity"),
-                                it.getInt("id")
+                                it.getInt("id"),
+                                it.getString("poster_path")
                             )
                         }
                         println(titlemovies)
